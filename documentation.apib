@@ -1,0 +1,49 @@
+FORMAT: 1A
+
+# La API de Harry Potter
+API de Harry Potter para la comunidad de PUNCH 🔥
+
+#Group Casas
+Recurso de casas disponibles
+
+## Todas las casas [/api/houses]
+### Todas las casas [GET]
+
++ Response 200 (application/json)
+    {
+        info : {count : Number, next : String | null, prev : String | null},
+        data : [
+            {
+                _id : ObjectId,
+                name : String,
+                headMaster : String,
+                ghost : String,
+                shield : String,
+                hymn : String,
+                thumbnail : String,
+                colors : Array,
+                animal : String,
+                commonRoom : String,
+                founder : String,
+                history : String,
+            }
+        ]
+    }
+## Mostrar una casa especifica [/api/houses/:id]
+### Mostrar una casa especifica [GET]
+
++ Response 200 (application/json)
+    {
+            _id : ObjectId,
+            name : String,
+            headMaster : String,
+            ghost : String,
+            shield : String,
+            hymn : String,
+            thumbnail : String,
+            colors : Array,
+            animal : String,
+            commonRoom : String,
+            founder : String,
+            history : String,
+    }

@@ -26,7 +26,7 @@
 
 <p> Esto levantar un development server en:
 </p>
-<a href="http://localhost:3000">localhost:3000</a>
+<a href="http://localhost:8000">localhost:8000</a>
 
 ### Colaboradores
 
