@@ -8,7 +8,7 @@ const paginationInfo = async ({ req, Model }) => {
       next: null,
       prev: null,
     };
-    // 3 > 20
+
     if (total > process.env.LIMIT_RESPONSE) {
       if (req.query.page) {
         const page = parseInt(req.query.page); // page=patata
