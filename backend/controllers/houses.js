@@ -1,16 +1,18 @@
-//const allHouses = require("./../models/houses");
 const House = require("./../models/houses");
-const all = (req, res) => {
-  res.json({ message: "Casas" });
+const { findAll, findById } = require("./../services/common");
+const { paginationInfo } = require("../services/pagination");
+const all = async (req, res) => {
+  const data = await findAll(House, req.query.page);
+  const info = await paginationInfo({ req, Model: House });
+  res.json({ data, info });
 };
 
-const single = (req, res) => {
-  res.json({ message: `Buscaste: ${req.params.id}` });
+const single = async (req, res) => {
+  const data = await findById(House, req.params.id);
+  res.json(data);
 };
-
 const create = async (req, res) => {
   try {
-    // req -> params, body, query
     const house = new House(req.body);
     const { _id } = await house.save();
     res.json({ message: "Casa dada de alta", _id });
@@ -19,4 +21,5 @@ const create = async (req, res) => {
     res.status(500).json({ message: "Error" });
   }
 };
+
 module.exports = { all, single, create };

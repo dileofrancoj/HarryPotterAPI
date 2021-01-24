@@ -1,0 +1,55 @@
+Documentacion 
+    swagger
+    APIB
+
+
+ - API Harry Potter
+    - /houses casas
+    - /spells hechizos
+    - /characters personajes
+    - /locations Ubicaciones
+    - /creatures animales fantasticas
+    - /movies peliculas
+
+Scrapper (Python)
+
+
+[GET] /api/houses
+Caracteristicas: 
+     _id : ObjectId,
+     name : String,
+     headMaster : String,
+     ghost : String,
+     shield : String,
+     hymn : String,,
+     thumbnail : String,
+     colors : Array,
+     animal : String,
+     commonRoom : String,,
+     founder : String,,
+     history : String,
+
+
+Backend
+
+    routes/
+    controllers/
+    models/ (BD) (Mongoose ORM Mongo)
+    utils/ (bcrypt)
+    services/ (engloba logica de modelos compartidos)
+    database/ archivo de configuracion
+    keys/ claves privadas para autenticar
+    .env
+
+
+.gitignore
+    node_modules/
+    keys/
+    .env
+
+
+npm i express
+npm i mongoose
+npm i dotenv
+npm i compression
+    npm i cors

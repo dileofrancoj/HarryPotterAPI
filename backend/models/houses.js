@@ -44,7 +44,7 @@ const HouseSchema = Schema({
     required: true,
   },
   colors: {
-    type: String,
+    type: Array,
     required: true,
   },
 });
