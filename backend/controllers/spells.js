@@ -12,4 +12,4 @@ const single = async (req, res) => {
   res.json(data);
 };
 
-module.exports = { all, single, create };
+module.exports = { all, single };

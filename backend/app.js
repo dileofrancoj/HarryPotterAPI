@@ -10,6 +10,7 @@ const { dbConnection } = require("./database/config");
 dbConnection();
 
 const houses = require("./routes/houses");
+const spells = require("./routes/spells");
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use(cookieParser());
 
 /* Rutas de la aplicacion */
 app.use("/api/houses", houses);
+app.use("/api/spells", spells);
 
 app.use(function (req, res, next) {
   console.error("ruta no encontrada");

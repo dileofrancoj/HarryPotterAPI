@@ -1,5 +1,5 @@
 const { Schema, model } = require("mongoose");
-// enum
+
 const SpellsSchema = Schema({
   name: {
     type: String,
@@ -19,4 +19,4 @@ const SpellsSchema = Schema({
   },
 });
 
-module.exports = model("Spells", SpellsSchema); // crea una coleccion House que implementa
+module.exports = model("Spells", SpellsSchema);
