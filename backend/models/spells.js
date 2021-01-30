@@ -13,8 +13,8 @@ const SpellsSchema = Schema({
     type: String,
     required: true,
   },
-  unforgivable: {
-    type: Boolean,
+  counterSpell: {
+    type: String,
     required: true,
   },
 });
